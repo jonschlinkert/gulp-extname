@@ -19,7 +19,7 @@ npm test
 
 ```js
 var gulp = require('gulp');
-var extname = require('gulp-ext');
+var extname = require('gulp-extname');
 
 gulp.task('default', function() {
   gulp.src('styles.less')
