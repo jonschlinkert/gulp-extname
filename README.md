@@ -3,10 +3,10 @@
 > gulp plugin to dynamically rewrite dest extensions based on src extensions.
 
 ## Install
-### Install with [npm](npmjs.org)
+### Install with [npm](npmjs.org):
 
 ```bash
-npm i gulp-extname --save
+npm i gulp-extname --save-dev
 ```
 
 ## Run tests
