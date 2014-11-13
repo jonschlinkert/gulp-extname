@@ -19,11 +19,11 @@ npm test
 
 ```js
 var gulp = require('gulp');
-var ext = require('gulp-ext');
+var extname = require('gulp-ext');
 
 gulp.task('default', function() {
   gulp.src('styles.less')
-    .pipe(ext())
+    .pipe(extname())
     .pipe(gulp.dest('dist/css'));
     //=> dist/css/styles.css
 });
@@ -32,9 +32,9 @@ gulp.task('default', function() {
 Explicitly pass an extension to use:
 
 ```js
-ext('.foo')
+extname('.foo')
 // or
-ext('foo')
+extname('foo')
 ```
 
 ## Extension mappings
