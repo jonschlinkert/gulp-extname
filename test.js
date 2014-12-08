@@ -125,7 +125,7 @@ describe('extname', function () {
   });
 
   describe('explicitly defined:', function () {
-    it('should use the extension defined by the user.', function (done) {
+    it('should use the extension defined by the user as a string.', function (done) {
       var stream = extname('.foo');
       var expected = new gutil.File({path: './faux.js', contents: null});
 
@@ -133,6 +133,32 @@ describe('extname', function () {
         file.path.should.equal('faux.foo');
         done();
       });
+      stream.write(expected);
+      stream.end();
+    });
+
+    it('should use the extension defined by the user as an object.', function (done) {
+      var stream = extname({ext: '.foo'});
+      var expected = new gutil.File({path: './faux.js', contents: null});
+
+      stream.once('data', function (file) {
+        file.path.should.equal('faux.foo');
+        done();
+      });
+
+      stream.write(expected);
+      stream.end();
+    });
+
+    it('should use the default mapped extension when no `ext` is on the object.', function (done) {
+      var stream = extname({blah: '.foo'});
+      var expected = new gutil.File({path: './faux.coffee', contents: null});
+
+      stream.once('data', function (file) {
+        file.path.should.equal('faux.js');
+        done();
+      });
+
       stream.write(expected);
       stream.end();
     });
