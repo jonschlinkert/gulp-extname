@@ -1,7 +1,7 @@
 {
   "name": "gulp-extname",
   "description": "gulp plugin to dynamically rewrite dest extensions based on src extensions.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/gulp-extname",
   "author": {
     "name": "Jon Schlinkert",
@@ -14,18 +14,20 @@
   "bugs": {
     "url": "https://github.com/jonschlinkert/gulp-extname/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/gulp-extname/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/gulp-extname/blob/master/LICENSE-MIT"
+  },
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
     "test": "mocha -R spec"
+  },
+  "dependencies": {
+    "rewrite-ext": "^0.1.0",
+    "through2": "^0.6.3"
   },
   "devDependencies": {
     "gulp-util": "^3.0.1",
@@ -35,6 +37,7 @@
   "keywords": [
     "dest",
     "ext",
+    "extension",
     "extensions",
     "extname",
     "file",
@@ -44,11 +47,10 @@
     "fs",
     "gulpfriendly",
     "map",
+    "name",
     "path",
+    "rename",
+    "rewrite",
     "src"
-  ],
-  "dependencies": {
-    "rewrite-ext": "^0.1.0",
-    "through2": "^0.6.3"
-  }
+  ]
 }
