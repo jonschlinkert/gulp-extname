@@ -14,6 +14,12 @@ module.exports = function(ext) {
     } else {
       file.path = rewrite(file.path, ext);
     }
+
+    var len = file.path.length;
+    if (file.path[len - 1] === '.') {
+      file.path = file.path.slice(0, len - 1);
+    }
+
     next(null, file);
   });
 };
