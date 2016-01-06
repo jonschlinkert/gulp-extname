@@ -24,6 +24,7 @@
     "through2": "^2.0.0"
   },
   "devDependencies": {
+    "gulp-format-md": "^0.1.4",
     "mocha": "*",
     "should": "*",
     "vinyl": "^1.1.0"
@@ -49,7 +50,17 @@
   ],
   "verb": {
     "related": {
-      "list": []
-    }
+      "list": [
+        "gulp-dest",
+        "gulp-htmlmin",
+        "gulp-prettify",
+        "gulp-format-md",
+        "gulp-routes"
+      ]
+    },
+    "layout": "default",
+    "plugins": [
+      "gulp-format-md"
+    ]
   }
 }
